@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PariNavbar from './PariNavbar';
 import PariFooter from './PariFooter';
-import HeroShader from '../components/HeroShader';
+import HeroBackground from '../components/HeroBackground';
 
 /* ── Marquee styles ─────────────────────────────── */
 const marqueeCSS = `
@@ -102,9 +102,7 @@ const PariHome = () => {
             <div className="relative w-full min-h-[100vh] pt-[100px] pb-20 flex flex-col items-center justify-center overflow-hidden">
                 {/* Shader adapted for theme */}
                 <div className="absolute inset-0 z-0 pointer-events-none transition-opacity duration-1000">
-                    <HeroShader />
-                    {/* Theme-aware overlay */}
-                    <div className="absolute inset-0 bg-[var(--pari-bg-primary)]/40 dark:bg-[#0D1B2A]/55 mix-blend-multiply transition-colors duration-1000" />
+                    <HeroBackground />
                 </div>
 
                 <div className="relative z-10 flex flex-col items-center text-center max-w-[860px] px-6 mx-auto">
