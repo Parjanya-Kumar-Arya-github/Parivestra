@@ -5,6 +5,7 @@ import logoBright from '../assets/logo_bright.png';
 import logoIcon from '../assets/logo_icon.png';
 import logoIconBright from '../assets/logo_icon_bright.png';
 import { useTheme } from '../context/ThemeContext';
+import ImageCarousel from '../components/ImageCarousel';
 
 const PariFooter = () => {
     const { theme } = useTheme();
@@ -95,6 +96,11 @@ const PariFooter = () => {
                             ></iframe>
                         </div>
                     </div>
+                </div>
+
+                {/* Image Carousel Showcase */}
+                <div className="mb-24">
+                    <ImageCarousel />
                 </div>
 
                 {/* CTA Headline */}
