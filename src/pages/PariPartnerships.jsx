@@ -1,6 +1,6 @@
-import React from 'react';
 import PariNavbar from './PariNavbar';
 import PariFooter from './PariFooter';
+import { Link } from 'react-router-dom';
 
 const models = [
     {
@@ -85,13 +85,13 @@ const PariPartnerships = () => {
                     <p className="text-[19px] text-[var(--pari-text-secondary)] leading-relaxed max-w-[580px] mx-auto mb-12 transition-colors">
                         We collaborate with brands, agencies, and platforms on strategic synergies, co-creation, and long-term growth partnerships.
                     </p>
-                    <a
-                        href="mailto:partners@parivestra.com"
+                    <Link
+                        to="/contact"
                         className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white font-semibold text-[16px] rounded-[14px] hover:from-[#E03D00] hover:to-[#FF4500] transition-all shadow-xl shadow-orange-500/30"
                     >
                         Start a Partnership
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                    </a>
+                    </Link>
                 </div>
             </section>
 
@@ -169,13 +169,13 @@ const PariPartnerships = () => {
                         For onboarding, partnerships, and strategic collaborations — reach out and let's explore what's possible together.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
-                            href="mailto:partners@parivestra.com"
+                        <Link
+                            to="/contact"
                             className="px-8 py-4 bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white text-[16px] font-semibold rounded-[14px] hover:from-[#E03D00] hover:to-[#FF4500] transition-all shadow-xl shadow-orange-500/30 flex items-center justify-center gap-2"
                         >
                             Email Us
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                        </a>
+                        </Link>
                         <a
                             href="https://www.canva.com/design/DAGnCSjB6Gg/phbckJVpepIfHc_prCwpxg/edit"
                             target="_blank"

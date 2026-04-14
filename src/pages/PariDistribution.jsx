@@ -1,6 +1,6 @@
-import React from 'react';
 import PariNavbar from './PariNavbar';
 import PariFooter from './PariFooter';
+import { Link } from 'react-router-dom';
 
 const segments = [
     {
@@ -163,13 +163,13 @@ const PariDistribution = () => {
                     <p className="text-[17px] text-[var(--pari-text-secondary)] leading-relaxed mb-10 transition-colors">
                         Ready to unlock access to Parivestra's proprietary distribution network? Let's build your growth infrastructure together.
                     </p>
-                    <a
-                        href="mailto:partners@parivestra.com"
+                    <Link
+                        to="/contact"
                         className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white font-semibold text-[16px] rounded-[14px] hover:from-[#E03D00] hover:to-[#FF4500] transition-all shadow-xl shadow-orange-500/30"
                     >
                         Explore Partnership
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                    </a>
+                    </Link>
                 </div>
             </section>
 

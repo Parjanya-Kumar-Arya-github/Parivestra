@@ -69,12 +69,12 @@ const PariNavbar = () => {
                 {/* CTA */}
                 <div className="flex items-center gap-3">
                     <ThemeToggle />
-                    <a
-                        href="mailto:partners@parivestra.com"
+                    <Link
+                        to="/contact"
                         className="hidden lg:flex px-5 py-2.5 text-[14px] font-semibold bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white rounded-[12px] hover:from-[#E03D00] hover:to-[#FF4500] transition-all shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40"
                     >
                         Partner With Us
-                    </a>
+                    </Link>
                     {/* Mobile menu button */}
                     <button
                         onClick={() => setMenuOpen(!menuOpen)}
@@ -107,12 +107,13 @@ const PariNavbar = () => {
                             {link.label}
                         </Link>
                     ))}
-                    <a
-                        href="mailto:partners@parivestra.com"
+                    <Link
+                        to="/contact"
+                        onClick={() => setMenuOpen(false)}
                         className="mt-2 px-5 py-3 text-[15px] font-semibold bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white rounded-[12px] text-center"
                     >
                         Partner With Us
-                    </a>
+                    </Link>
                 </div>
             )}
         </nav>

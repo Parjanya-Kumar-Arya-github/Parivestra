@@ -115,15 +115,15 @@ const PariFooter = () => {
                     <p className="text-[var(--pari-text-secondary)] text-[18px] max-w-[480px] leading-relaxed mb-10 transition-colors">
                         We actively collaborate with brands, agencies, and platforms on strategic synergies and long-term growth.
                     </p>
-                    <a
-                        href="mailto:partners@parivestra.com"
+                    <Link
+                        to="/contact"
                         className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white font-semibold text-[16px] rounded-[14px] hover:from-[#E03D00] hover:to-[#FF4500] transition-all shadow-xl shadow-orange-500/30 hover:shadow-orange-500/50"
                     >
                         Get In Touch
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Nav Links */}
@@ -142,6 +142,7 @@ const PariFooter = () => {
                         <Link to="/case-studies" className="hover:text-[var(--pari-text-primary)] transition-colors">Case Studies</Link>
                         <Link to="/distribution" className="hover:text-[var(--pari-text-primary)] transition-colors">Distribution</Link>
                         <Link to="/about" className="hover:text-[var(--pari-text-primary)] transition-colors">About</Link>
+                        <Link to="/contact" className="hover:text-[var(--pari-text-primary)] transition-colors">Contact</Link>
                     </div>
                     <div className="text-[13px] text-[var(--pari-text-secondary)] transition-colors">Distribution, engineered for outcomes.</div>
                 </div>

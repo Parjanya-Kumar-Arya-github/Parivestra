@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PariNavbar from './PariNavbar';
 import PariFooter from './PariFooter';
 import HeroBackground from '../components/HeroBackground';
@@ -124,13 +125,13 @@ const PariHome = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-4">
-                        <a
-                            href="mailto:partners@parivestra.com"
+                        <Link
+                            to="/contact"
                             className="px-8 py-4 bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white text-[16px] font-semibold rounded-[14px] hover:from-[#E03D00] hover:to-[#FF4500] transition-all shadow-xl shadow-orange-500/30 flex items-center gap-2"
                         >
                             Partner With Us
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                        </a>
+                        </Link>
                         <a
                             href="#what-we-do"
                             className="px-8 py-4 bg-[var(--pari-bg-secondary)]/10 dark:bg-white/8 text-[var(--pari-text-primary)] text-[16px] font-medium rounded-[14px] hover:bg-[var(--pari-bg-secondary)]/20 dark:hover:bg-white/15 transition-all border border-[var(--pari-border)]"
