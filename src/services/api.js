@@ -1,4 +1,6 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+// Use relative path '/api' in production (Vercel) so it hits serverless APIs.
+// Use 'http://localhost:5000/api' locally if using the separate node server.
+const API_BASE_URL = import.meta.env.PROD ? '/api' : 'http://localhost:5000/api';
 
 export const sendContactMessage = async (data) => {
     const response = await fetch(`${API_BASE_URL}/send-email`, {
