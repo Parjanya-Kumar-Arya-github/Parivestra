@@ -21,7 +21,7 @@ import meeshoLogo from '../assets/meesho.jpg';
 import ndtvLogo from '../assets/NDTV.png';
 import indiatodayLogo from '../assets/IndiaToday.png';
 import hindustantimesLogo from '../assets/HindustanTimes.jpg';
-import tataLogo from '../assets/TataWPL.jpg';
+import tataLogo from '../assets/tataWPL.jpg';
 import apolloLogo from '../assets/apollo.jpg';
 import wowmomoLogo from '../assets/WOWmomo.jpg';
 import idpLogo from '../assets/IDP.png';
