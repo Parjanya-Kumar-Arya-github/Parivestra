@@ -1,67 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PariNavbar from './PariNavbar';
 import PariFooter from './PariFooter';
 import logoIcon from '../assets/logo_icon.png';
 import { useTheme } from '../context/ThemeContext';
+import { useContactForm } from '../hooks/useContactForm';
+import FormField from '../components/Contact/FormField';
 
 const PariContact = () => {
     const { theme } = useTheme();
-    const [formData, setFormData] = useState({
-        name: '',
-        brandName: '',
-        phoneNumber: '',
-        serviceRequired: '',
-        emailId: ''
-    });
+    const { formData, status, errorMessage, handleChange, handleSubmit } = useContactForm();
 
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState(null);
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setSubmitStatus(null);
-
-        try {
-            const response = await fetch('http://localhost:5000/api/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                setSubmitStatus('success');
-                setFormData({
-                    name: '',
-                    brandName: '',
-                    phoneNumber: '',
-                    serviceRequired: '',
-                    emailId: ''
-                });
-            } else {
-                setSubmitStatus('error');
-            }
-        } catch (error) {
-            console.error('Submission error:', error);
-            setSubmitStatus('error');
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
-
-    const inputClasses = `
-        w-full bg-transparent border-b-2 border-[var(--pari-border)] py-3 px-1
-        text-[var(--pari-text-primary)] placeholder:text-[var(--pari-text-secondary)]/50
-        focus:outline-none focus:border-[#FF4500] hover:border-[#FF4500]/60
-        transition-all duration-300 group
-    `;
+    const isSubmitting = status === 'submitting';
 
     return (
         <div className="bg-[var(--pari-bg-primary)] min-h-screen text-[var(--pari-text-primary)] font-sans">
@@ -102,71 +51,48 @@ const PariContact = () => {
 
                         <form onSubmit={handleSubmit} className="space-y-10">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                                <div className="space-y-2">
-                                    <label className="text-[12px] font-bold uppercase tracking-wider text-[#FF4500]">Name</label>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        placeholder="John Doe"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        className={inputClasses}
-                                        required
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-[12px] font-bold uppercase tracking-wider text-[#FF4500]">Brand Name</label>
-                                    <input
-                                        type="text"
-                                        name="brandName"
-                                        placeholder="Company Inc."
-                                        value={formData.brandName}
-                                        onChange={handleChange}
-                                        className={inputClasses}
-                                        required
-                                    />
-                                </div>
+                                <FormField
+                                    label="Name"
+                                    name="name"
+                                    placeholder="John Doe"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                />
+                                <FormField
+                                    label="Brand Name"
+                                    name="brandName"
+                                    placeholder="Company Inc."
+                                    value={formData.brandName}
+                                    onChange={handleChange}
+                                />
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                                <div className="space-y-2">
-                                    <label className="text-[12px] font-bold uppercase tracking-wider text-[#FF4500]">Phone Number</label>
-                                    <input
-                                        type="tel"
-                                        name="phoneNumber"
-                                        placeholder="+91 00000 00000"
-                                        value={formData.phoneNumber}
-                                        onChange={handleChange}
-                                        className={inputClasses}
-                                        required
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-[12px] font-bold uppercase tracking-wider text-[#FF4500]">Email Id</label>
-                                    <input
-                                        type="email"
-                                        name="emailId"
-                                        placeholder="john@example.com"
-                                        value={formData.emailId}
-                                        onChange={handleChange}
-                                        className={inputClasses}
-                                        required
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                <label className="text-[12px] font-bold uppercase tracking-wider text-[#FF4500]">Service Required</label>
-                                <input
-                                    type="text"
-                                    name="serviceRequired"
-                                    placeholder="e.g. Influencer Marketing, Distribution"
-                                    value={formData.serviceRequired}
+                                <FormField
+                                    type="tel"
+                                    label="Phone Number"
+                                    name="phoneNumber"
+                                    placeholder="+91 00000 00000"
+                                    value={formData.phoneNumber}
                                     onChange={handleChange}
-                                    className={inputClasses}
-                                    required
+                                />
+                                <FormField
+                                    type="email"
+                                    label="Email Id"
+                                    name="emailId"
+                                    placeholder="john@example.com"
+                                    value={formData.emailId}
+                                    onChange={handleChange}
                                 />
                             </div>
+
+                            <FormField
+                                label="Service Required"
+                                name="serviceRequired"
+                                placeholder="e.g. Influencer Marketing, Distribution"
+                                value={formData.serviceRequired}
+                                onChange={handleChange}
+                            />
 
                             <div className="pt-6">
                                 <button
@@ -185,16 +111,16 @@ const PariContact = () => {
                                     ) : 'Send Message'}
                                 </button>
 
-                                {submitStatus === 'success' && (
-                                    <p className="mt-4 text-green-500 font-medium flex items-center gap-2">
+                                {status === 'success' && (
+                                    <p className="mt-4 flex items-center gap-2 p-4 bg-green-500/10 border border-green-500/20 text-green-500 font-medium rounded-lg">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
                                         Message sent! We'll be in touch.
                                     </p>
                                 )}
-                                {submitStatus === 'error' && (
-                                    <p className="mt-4 text-red-500 font-medium flex items-center gap-2">
+                                {status === 'error' && (
+                                    <p className="mt-4 flex items-center gap-2 p-4 bg-red-500/10 border border-red-500/20 text-red-500 font-medium rounded-lg">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
-                                        Failed to send message. Please try again.
+                                        {errorMessage || 'Failed to send message. Please try again.'}
                                     </p>
                                 )}
 
