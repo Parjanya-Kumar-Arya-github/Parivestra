@@ -4,6 +4,20 @@ import PariNavbar from './PariNavbar';
 import PariFooter from './PariFooter';
 import HeroBackground from '../components/HeroBackground';
 
+// Top logos for Hompage Marquee
+import amazonLogo from '../assets/amazon.png';
+import uberLogo from '../assets/Uber.svg';
+import swiggyLogo from '../assets/swiggy.png';
+import paytmLogo from '../assets/Paytm.png';
+import redbullLogo from '../assets/RedBull.png';
+import nestleLogo from '../assets/nestle.png';
+import pizzahutLogo from '../assets/PizzaHut.jpg';
+import budweiserLogo from '../assets/Budweiser.png';
+import gilletteLogo from '../assets/Gillette.jpg';
+import relianceLogo from '../assets/Reliance.png';
+
+const topLogos = [amazonLogo, uberLogo, swiggyLogo, paytmLogo, redbullLogo, nestleLogo, pizzahutLogo, budweiserLogo, gilletteLogo, relianceLogo];
+
 /* ── Marquee styles ─────────────────────────────── */
 const marqueeCSS = `
   @keyframes pScrollL { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
@@ -151,6 +165,22 @@ const PariHome = () => {
                                 <span className="text-[36px] font-bold text-[#FF4500] leading-none">{s.val}</span>
                                 <span className="text-[13px] text-[var(--pari-text-secondary)] mt-2 font-medium">{s.label}</span>
                             </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* ── HOME LOGOS MARQUEE ──────────────────────────── */}
+            <div className="w-full bg-[var(--pari-bg-primary)] py-12 border-y border-[var(--pari-border)] overflow-hidden relative transition-colors">
+                <p className="text-center text-[13px] font-bold uppercase tracking-widest text-[var(--pari-text-secondary)] mb-8">
+                    Trusted by industry leaders
+                </p>
+                <div className="relative p-marquee flex overflow-hidden w-full max-w-[1200px] mx-auto">
+                    <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-[var(--pari-bg-primary)] to-transparent z-10 pointer-events-none transition-all" />
+                    <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-[var(--pari-bg-primary)] to-transparent z-10 pointer-events-none transition-all" />
+                    <div className="p-scroll-l items-center gap-16 px-8">
+                        {[...topLogos, ...topLogos, ...topLogos].map((logo, i) => (
+                            <img key={i} src={logo} alt="Brand Logo" className="h-[40px] md:h-[50px] w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
                         ))}
                     </div>
                 </div>

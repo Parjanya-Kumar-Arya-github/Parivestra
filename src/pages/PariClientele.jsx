@@ -3,23 +3,71 @@ import PariNavbar from './PariNavbar';
 import PariFooter from './PariFooter';
 
 // Import local logos
+import amazonLogo from '../assets/amazon.png';
+import uberLogo from '../assets/Uber.svg';
 import swiggyLogo from '../assets/swiggy.png';
-import uberLogo from '../assets/uber.png';
-import flixbusLogo from '../assets/flixbus.png';
+import paytmLogo from '../assets/Paytm.png';
+import redbullLogo from '../assets/RedBull.png';
 import nestleLogo from '../assets/nestle.png';
-import apolloLogo from '../assets/apollo.jpg';
+import pizzahutLogo from '../assets/PizzaHut.jpg';
+import budweiserLogo from '../assets/Budweiser.png';
+import gilletteLogo from '../assets/Gillette.jpg';
+import hersheysLogo from "../assets/Hershey's.svg";
+import nescafeLogo from '../assets/Nescafe.png';
+import relianceLogo from '../assets/Reliance.png';
+import heroLogo from '../assets/hero.png';
 import myntraLogo from '../assets/myntra.jpg';
+import meeshoLogo from '../assets/meesho.jpg';
+import ndtvLogo from '../assets/NDTV.png';
+import indiatodayLogo from '../assets/IndiaToday.png';
+import hindustantimesLogo from '../assets/HindustanTimes.jpg';
+import tataLogo from '../assets/TataWPL.jpg';
+import apolloLogo from '../assets/apollo.jpg';
+import wowmomoLogo from '../assets/WOWmomo.jpg';
+import idpLogo from '../assets/IDP.png';
+import fixdermaLogo from '../assets/FixDerma.avif';
+import fastupLogo from '../assets/FastUp.webp';
+import hangyoLogo from '../assets/Hangyo.jpg';
+import admitadLogo from '../assets/Admitad.webp';
+import aptosLogo from '../assets/Apstos.png';
+import riseinLogo from '../assets/RiseIn.png';
+import stockpeLogo from '../assets/StockPe.png';
+import ohiLogo from '../assets/OHI.jpg';
+import excellentLogo from '../assets/excellentPublicity.jpg';
+import flixbusLogo from '../assets/flixbus.png';
 
 const brands = [
-    { name: 'Swiggy', logo: swiggyLogo, sector: 'Food Delivery' },
+    { name: 'Amazon', logo: amazonLogo, sector: 'E-Commerce' },
     { name: 'Uber', logo: uberLogo, sector: 'Mobility' },
-    { name: 'FlixBus', logo: flixbusLogo, sector: 'Intercity Travel' },
+    { name: 'Swiggy', logo: swiggyLogo, sector: 'Food Delivery' },
+    { name: 'Paytm', logo: paytmLogo, sector: 'Fintech' },
+    { name: 'RedBull', logo: redbullLogo, sector: 'Beverage' },
     { name: 'Nestlé', logo: nestleLogo, sector: 'FMCG' },
-    { name: 'JioStar', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/48/JioStar_2025.svg', sector: 'Media & Entertainment' },
-    { name: 'Apollo', logo: apolloLogo, sector: 'Healthcare' },
-    { name: 'Meesho', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Meesho_Logo_Full.png', sector: 'Social Commerce' },
+    { name: 'Pizza Hut', logo: pizzahutLogo, sector: 'QSR' },
+    { name: 'Budweiser', logo: budweiserLogo, sector: 'Beverage' },
+    { name: 'Gillette', logo: gilletteLogo, sector: 'Personal Care' },
+    { name: 'Hershey\'s', logo: hersheysLogo, sector: 'Confectionery' },
+    { name: 'Nescafé', logo: nescafeLogo, sector: 'Beverage' },
+    { name: 'Reliance', logo: relianceLogo, sector: 'Conglomerate' },
     { name: 'Myntra', logo: myntraLogo, sector: 'Fashion E-Commerce' },
-    { name: 'Tata Group', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Tata_logo.svg', sector: 'Conglomerate' },
+    { name: 'Meesho', logo: meeshoLogo, sector: 'Social Commerce' },
+    { name: 'NDTV', logo: ndtvLogo, sector: 'Media & News' },
+    { name: 'India Today', logo: indiatodayLogo, sector: 'Media' },
+    { name: 'Hindustan Times', logo: hindustantimesLogo, sector: 'Media' },
+    { name: 'Tata WPL', logo: tataLogo, sector: 'Sports & Conglomerate' },
+    { name: 'Apollo', logo: apolloLogo, sector: 'Healthcare' },
+    { name: 'Wow! Momo', logo: wowmomoLogo, sector: 'QSR' },
+    { name: 'IDP', logo: idpLogo, sector: 'Education' },
+    { name: 'FixDerma', logo: fixdermaLogo, sector: 'Skincare' },
+    { name: 'Fast&Up', logo: fastupLogo, sector: 'Nutrition' },
+    { name: 'Hangyo', logo: hangyoLogo, sector: 'Ice Cream' },
+    { name: 'Admitad', logo: admitadLogo, sector: 'Affiliate Marketing' },
+    { name: 'Aptos', logo: aptosLogo, sector: 'Blockchain' },
+    { name: 'RiseIn', logo: riseinLogo, sector: 'Web3 Academy' },
+    { name: 'StockPe', logo: stockpeLogo, sector: 'Fintech' },
+    { name: 'OHI', logo: ohiLogo, sector: 'Advertising' },
+    { name: 'Excellent Publicity', logo: excellentLogo, sector: 'Advertising' },
+    { name: 'FlixBus', logo: flixbusLogo, sector: 'Intercity Travel' },
 ];
 
 const PariClientele = () => {
@@ -42,25 +90,36 @@ const PariClientele = () => {
                 </div>
             </section>
 
-            {/* ── BRAND GRID ────────────────────────────────── */}
-            <section className="py-16 px-6 bg-[var(--pari-bg-secondary)] dark:bg-[#080F18] transition-colors">
-                <div className="max-w-[1100px] mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[var(--pari-border)] rounded-2xl overflow-hidden border border-[var(--pari-border)] transition-colors">
+            {/* ── BRAND GRID (Premium Collage) ──────────────── */}
+            <section className="py-24 px-4 sm:px-6 bg-[var(--pari-bg-secondary)] dark:bg-[#080F18] transition-colors relative overflow-hidden">
+                {/* Decorative background blur to make it feel rich */}
+                <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] bg-[#FF4500]/5 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute bottom-1/4 right-1/4 w-[30vw] h-[30vw] bg-[#FF6B35]/5 rounded-full blur-[100px] pointer-events-none" />
+
+                <div className="max-w-[1400px] mx-auto relative z-10">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-5">
                         {brands.map((brand) => (
                             <div
                                 key={brand.name}
-                                className="group relative flex flex-col items-center justify-center bg-[var(--pari-bg-primary)] hover:bg-[var(--pari-bg-secondary)] dark:bg-[#0D1B2A] dark:hover:bg-[#0F1F30] h-[220px] transition-all duration-300 hover:z-10"
+                                className="group relative flex flex-col items-center justify-center h-[180px] bg-white border border-[var(--pari-border)] hover:border-[#FF4500]/50 rounded-[28px] overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(255,69,0,0.15)] hover:-translate-y-2 cursor-pointer"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#FF4500]/0 to-[#FF4500]/0 group-hover:from-[#FF4500]/5 group-hover:to-transparent transition-all duration-300" />
-                                <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center p-3 mb-4 shadow-sm group-hover:shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-800">
+                                {/* Dark Gradient Overlay on Hover for Text Readability */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
+
+                                {/* Full Tile Logo Plate */}
+                                <div className="absolute inset-0 z-0 p-8 flex items-center justify-center group-hover:scale-[0.85] group-hover:-translate-y-3 transition-all duration-500">
                                     <img
                                         src={brand.logo}
                                         alt={`${brand.name} Logo`}
-                                        className="w-full h-full object-contain transition-all duration-300"
+                                        className="w-full h-full object-contain mix-blend-multiply grayscale-[15%] group-hover:grayscale-0 transition-all duration-500"
                                     />
                                 </div>
-                                <h3 className="text-[18px] font-bold text-[var(--pari-text-primary)] group-hover:text-[#FF4500] transition-colors">{brand.name}</h3>
-                                <p className="text-[12px] text-[var(--pari-text-secondary)] mt-1 font-medium transition-colors">{brand.sector}</p>
+
+                                {/* Sliding Text Details */}
+                                <div className="absolute bottom-0 inset-x-0 p-4 translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-20 flex flex-col items-center text-center">
+                                    <h3 className="text-[17px] font-bold text-white leading-tight drop-shadow-md">{brand.name}</h3>
+                                    <p className="text-[11px] font-bold uppercase tracking-widest text-[#FF4500] mt-1 drop-shadow-md">{brand.sector}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
