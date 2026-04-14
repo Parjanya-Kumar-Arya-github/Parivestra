@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import PariHome from './pages/PariHome';
 import PariAbout from './pages/PariAbout';
 import PariClientele from './pages/PariClientele';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/case-studies" element={<PariCaseStudies />} />
         <Route path="/contact" element={<PariContact />} />
       </Routes>
+      <SpeedInsights />
     </Router>
   );
 }
