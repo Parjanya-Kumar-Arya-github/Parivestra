@@ -54,7 +54,7 @@ const segments = [
         color: '#9999FE',
         title: 'Influencer Ecosystems',
         type: 'Digital',
-        desc: 'Managed influencer campaigns from nano to macro across Instagram, YouTube, and emerging platforms — tied to measurable sales outcomes.',
+        desc: 'End-to-end influencer campaigns from nano to macro creators across major and emerging platforms, ensuring all initiatives link directly to sales conversions.',
         metrics: ['Nano to Macro', 'Sales-Linked', 'Multi-Platform'],
     },
     {
@@ -63,7 +63,7 @@ const segments = [
         color: '#FBC768',
         title: 'AI SEO & ORM',
         type: 'Digital',
-        desc: 'AI-powered search optimization, reputation management, and content distribution that compounds over time.',
+        desc: 'Intelligent search optimization, active reputation management, and content planning designed for compounded visibility over time.',
         metrics: ['AI-Powered', 'Compounding Returns', 'Brand Trust'],
     },
     {
@@ -72,7 +72,7 @@ const segments = [
         color: '#81E4BA',
         title: 'Global Digital Reach',
         type: 'Digital',
-        desc: 'US, UAE, ASEAN, and Australia — performance marketing, affiliate stacks, and AI-led marketing across high-value international markets.',
+        desc: 'Executing performance marketing, affiliate programs, and AI-driven campaigns across high-value markets including the US, UAE, ASEAN, and Australia.',
         metrics: ['US • UAE • ASEAN • AU', 'Performance Stack', 'International'],
     },
 ];
@@ -92,7 +92,7 @@ const PariDistribution = () => {
                         <em style={{ fontFamily: 'Georgia, serif', color: '#FF4500' }}>lever, activated</em>
                     </h1>
                     <p className="text-[19px] text-[var(--pari-text-secondary)] leading-relaxed max-w-[580px] mx-auto transition-colors">
-                        We operate across multiple proprietary and partner-led distribution segments spanning offline and digital ecosystems.
+                        We leverage a diverse mix of owned and partnered channels to engage audiences effectively across deep physical and online ecosystems.
                     </p>
                 </div>
             </section>

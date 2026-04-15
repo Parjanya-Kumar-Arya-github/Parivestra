@@ -4,7 +4,7 @@ import PariNavbar from './PariNavbar';
 import PariFooter from './PariFooter';
 import HeroBackground from '../components/HeroBackground';
 
-// Top logos for Hompage Marquee
+// All clientele logos for Homepage Marquee
 import amazonLogo from '../assets/amazon.png';
 import uberLogo from '../assets/Uber.svg';
 import swiggyLogo from '../assets/swiggy.png';
@@ -14,9 +14,36 @@ import nestleLogo from '../assets/nestle.png';
 import pizzahutLogo from '../assets/PizzaHut.jpg';
 import budweiserLogo from '../assets/Budweiser.png';
 import gilletteLogo from '../assets/Gillette.jpg';
+import hersheysLogo from "../assets/Hershey's.svg";
+import nescafeLogo from '../assets/Nescafe.png';
 import relianceLogo from '../assets/Reliance.png';
+import myntraLogo from '../assets/myntra.jpg';
+import meeshoLogo from '../assets/meesho.jpg';
+import ndtvLogo from '../assets/NDTV.png';
+import indiatodayLogo from '../assets/IndiaToday.png';
+import hindustantimesLogo from '../assets/HindustanTimes.jpg';
+import tataLogo from '../assets/tataWPL.jpg';
+import apolloLogo from '../assets/apollo.jpg';
+import wowmomoLogo from '../assets/WOWmomo.jpg';
+import idpLogo from '../assets/IDP.png';
+import fixdermaLogo from '../assets/FixDerma.avif';
+import fastupLogo from '../assets/FastUp.webp';
+import hangyoLogo from '../assets/Hangyo.jpg';
+import admitadLogo from '../assets/Admitad.webp';
+import aptosLogo from '../assets/Apstos.png';
+import riseinLogo from '../assets/RiseIn.png';
+import stockpeLogo from '../assets/StockPe.png';
+import ohiLogo from '../assets/OHI.jpg';
+import excellentLogo from '../assets/excellentPublicity.jpg';
+import flixbusLogo from '../assets/flixbus.png';
 
-const topLogos = [amazonLogo, uberLogo, swiggyLogo, paytmLogo, redbullLogo, nestleLogo, pizzahutLogo, budweiserLogo, gilletteLogo, relianceLogo];
+const topLogos = [
+    amazonLogo, uberLogo, swiggyLogo, paytmLogo, redbullLogo, nestleLogo, pizzahutLogo,
+    budweiserLogo, gilletteLogo, hersheysLogo, nescafeLogo, relianceLogo,
+    myntraLogo, meeshoLogo, ndtvLogo, indiatodayLogo, hindustantimesLogo, tataLogo,
+    apolloLogo, wowmomoLogo, idpLogo, fixdermaLogo, fastupLogo, hangyoLogo,
+    admitadLogo, aptosLogo, riseinLogo, stockpeLogo, ohiLogo, excellentLogo, flixbusLogo
+];
 
 /* ── Marquee styles ─────────────────────────────── */
 const marqueeCSS = `
@@ -57,7 +84,7 @@ const pillarCards = [
         tag: 'AI-Powered',
         color: '#FF4500',
         heading: 'AI-Optimized Marketing Infrastructure',
-        desc: 'AI SEO, ORM, attribution scoring, and intelligent audience targeting that moves metrics — not just impressions.',
+        desc: 'AI SEO, ORM, attribution models, and smart audience targeting engineered to drive bottom-line metrics over mere impressions.',
         icon: 'fa-solid fa-microchip',
     },
     {
@@ -73,7 +100,7 @@ const pillarCards = [
         tag: 'Offline',
         color: '#9999FE',
         heading: 'Offline & On-Ground Distribution',
-        desc: 'Colleges, RWAs, turfs, community events — proprietary non-biddable inventories with high-trust, high-intent audiences.',
+        desc: 'Direct access to exclusive community spaces like campuses, residential societies, and local events to reach highly engaged, trusting audiences.',
         icon: 'fa-solid fa-map-location-dot',
     },
     {
@@ -135,7 +162,7 @@ const PariHome = () => {
                     </h1>
 
                     <p className="text-[20px] leading-[1.5] text-[var(--pari-text-secondary)] max-w-[560px] mb-12 transition-colors">
-                        AI-optimized marketing, influencer ecosystems, affiliate commerce, and offline distribution — all mapped to measurable business outcomes.
+                        We blend intelligent marketing, influencer networks, affiliate setups, and physical distribution to deliver clear and measurable results.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -178,9 +205,11 @@ const PariHome = () => {
                 <div className="relative p-marquee flex overflow-hidden w-full max-w-[1200px] mx-auto">
                     <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-[var(--pari-bg-primary)] to-transparent z-10 pointer-events-none transition-all" />
                     <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-[var(--pari-bg-primary)] to-transparent z-10 pointer-events-none transition-all" />
-                    <div className="p-scroll-l items-center gap-16 px-8">
-                        {[...topLogos, ...topLogos, ...topLogos].map((logo, i) => (
-                            <img key={i} src={logo} alt="Brand Logo" className="h-[40px] md:h-[50px] w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+                    <div className="p-scroll-l items-center gap-10 px-5">
+                        {[...topLogos, ...topLogos].map((logo, i) => (
+                            <div key={i} className="flex items-center justify-center bg-white rounded-xl shadow-sm border border-[var(--pari-border)] p-4 h-[80px] min-w-[140px] transition-all duration-300 hover:shadow-md hover:-translate-y-1 mx-3">
+                                <img src={logo} alt="Brand Logo" className="h-[40px] md:h-[50px] w-auto object-contain mix-blend-multiply" />
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -198,16 +227,16 @@ const PariHome = () => {
                             <em style={{ fontFamily: 'Georgia, serif', color: '#FF4500' }}>real outcomes</em>
                         </h2>
                         <p className="text-[18px] text-[var(--pari-text-secondary)] max-w-[620px] leading-relaxed transition-colors">
-                            Parivestra is a modern distribution and growth infrastructure company built for brands that want outcomes, not impressions. We sit at the intersection of AI-optimized marketing, influencer ecosystems, affiliate commerce, and offline distribution.
+                            Parivestra is a growth infrastructure partner designed for brands focused on tangible results over vanity metrics. We unify advanced digital targeting, community networks, and robust offline channels.
                         </p>
                     </div>
 
                     {/* Thesis cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[
-                            { icon: 'fa-solid fa-earth-asia', title: 'Community-First', desc: 'Every channel we activate is designed around high-intent communities — online and offline.' },
-                            { icon: 'fa-solid fa-chart-pie', title: 'Data-Led', desc: 'Proprietary data capture across consumer journeys, attributed back to real business metrics.' },
-                            { icon: 'fa-solid fa-bullseye', title: 'Outcome-Driven', desc: 'Our models are tied directly to sales, adoption, retention, and long-term market presence.' },
+                            { icon: 'fa-solid fa-earth-asia', title: 'Community-First', desc: 'Every pathway we build centers around highly engaged consumer groups, spanning both digital and physical spaces.' },
+                            { icon: 'fa-solid fa-chart-pie', title: 'Data-Led', desc: 'Comprehensive behavioral tracking across journeys, effectively linked back to your core business indicators.' },
+                            { icon: 'fa-solid fa-bullseye', title: 'Outcome-Driven', desc: 'Our operational models tie directly to revenue growth, product adoption, and lasting market presence.' },
                         ].map((t) => (
                             <div key={t.title} className="bg-[var(--pari-bg-secondary)]/50 dark:bg-white/4 border border-[var(--pari-border)] rounded-2xl p-8 hover:bg-[var(--pari-bg-secondary)]/80 dark:hover:bg-white/7 transition-all hover:border-[#FF4500]/30 group shadow-sm dark:shadow-none">
                                 <i className={`${t.icon} text-[40px] text-[#FF4500] mb-6 block transition-transform group-hover:scale-110 duration-300`}></i>

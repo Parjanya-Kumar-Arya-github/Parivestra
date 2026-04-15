@@ -33,11 +33,11 @@ const PariAbout = () => {
                             <div className="h-px w-full bg-[var(--pari-border)] mb-10" />
 
                             <p className="text-[18px] text-[var(--pari-text-secondary)] leading-relaxed mb-8 transition-colors">
-                                We sit at the intersection of AI-optimized marketing, influencer ecosystems, affiliate commerce, and offline distribution, enabling measurable scale across digital and physical channels.
+                                We bridge the gap between advanced digital marketing, creator networks, performance commerce, and on-ground activations to drive scalable growth across all domains.
                             </p>
 
                             <p className="text-[18px] text-[var(--pari-text-secondary)] leading-relaxed transition-colors">
-                                Our core thesis is built on the belief that distribution should be community-first, data-led, and outcome-driven. Every channel we activate is designed to move brands closer to real business metrics — sales, adoption, retention, and long-term market presence.
+                                Our fundamental approach centers on prioritizing audiences, leveraging data, and focusing strictly on results. Every campaign we launch works toward concrete objectives like improved revenue, sustained user adoption, and enduring brand prominence.
                             </p>
                         </div>
                     </div>

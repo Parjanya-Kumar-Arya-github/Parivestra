@@ -12,7 +12,7 @@ const models = [
     {
         icon: 'fa-solid fa-rocket',
         title: 'Go-To-Market (GTM) Execution',
-        desc: 'Full-cycle market entry, testing, and scaling — from strategy to on-ground activation.',
+        desc: 'End-to-end support for market entry, testing, and scaling, taking your brand from initial strategy to active on-ground deployment.',
         color: '#FFB347',
     },
     {
@@ -166,7 +166,7 @@ const PariPartnerships = () => {
                         <span style={{ color: '#FF4500' }}>Parivestra?</span>
                     </h2>
                     <p className="text-[18px] text-[var(--pari-text-secondary)] leading-relaxed mb-10 transition-colors">
-                        For onboarding, partnerships, and strategic collaborations — reach out and let's explore what's possible together.
+                        Whether you're looking for onboarding, alliances, or strategic collaborations, we invite you to reach out and explore what we can build together.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
