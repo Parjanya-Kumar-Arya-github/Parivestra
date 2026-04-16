@@ -62,11 +62,11 @@ const Pill = ({ text, iconClass }) => (
 );
 
 const row1 = [
-    { iconClass: 'fa-solid fa-robot', text: 'AI-Optimized Marketing' },
-    { iconClass: 'fa-solid fa-crosshairs', text: 'Outcome-First Models' },
+    { iconClass: 'fa-solid fa-robot', text: 'AI Optimized Marketing' },
+    { iconClass: 'fa-solid fa-crosshairs', text: 'Outcome First Models' },
     { iconClass: 'fa-solid fa-school', text: 'College & Campus Networks' },
-    { iconClass: 'fa-solid fa-chart-line', text: 'Data-Led Attribution' },
-    { iconClass: 'fa-solid fa-globe', text: 'Pan-India Distribution' },
+    { iconClass: 'fa-solid fa-chart-line', text: 'Data Led Attribution' },
+    { iconClass: 'fa-solid fa-globe', text: 'Pan India Distribution' },
     { iconClass: 'fa-solid fa-handshake', text: 'Influencer Ecosystems' },
 ];
 const row2 = [
@@ -81,10 +81,10 @@ const row2 = [
 const pillarCards = [
     {
         id: 'ai',
-        tag: 'AI-Powered',
+        tag: 'AI Powered',
         color: '#FF4500',
-        heading: 'AI-Optimized Marketing Infrastructure',
-        desc: 'AI SEO, ORM, attribution models, and smart audience targeting engineered to drive bottom-line metrics over mere impressions.',
+        heading: 'AI Optimized Marketing Infrastructure',
+        desc: 'AI SEO, ORM, attribution models, and smart audience targeting engineered to drive bottom line metrics over mere impressions.',
         icon: 'fa-solid fa-microchip',
     },
     {
@@ -92,14 +92,14 @@ const pillarCards = [
         tag: 'Influencers',
         color: '#FFB347',
         heading: 'Influencer & Affiliate Ecosystems',
-        desc: 'Performance-linked influencer networks and affiliate commerce stacks tied directly to sales and revenue outcomes.',
+        desc: 'Performance linked influencer networks and affiliate commerce stacks tied directly to sales and revenue outcomes.',
         icon: 'fa-solid fa-users-viewfinder',
     },
     {
         id: 'offline',
         tag: 'Offline',
         color: '#9999FE',
-        heading: 'Offline & On-Ground Distribution',
+        heading: 'Offline & On Ground Distribution',
         desc: 'Direct access to exclusive community spaces like campuses, residential societies, and local events to reach highly engaged, trusting audiences.',
         icon: 'fa-solid fa-map-location-dot',
     },
@@ -107,8 +107,8 @@ const pillarCards = [
         id: 'data',
         tag: 'Data',
         color: '#81E4BA',
-        heading: 'Outcome-Mapped Analytics',
-        desc: 'End-to-end data capture across offline and online consumer journeys, correlated to real business metrics.',
+        heading: 'Outcome Mapped Analytics',
+        desc: 'End to end data capture across offline and online consumer journeys, correlated to real business metrics.',
         icon: 'fa-solid fa-database',
     },
 ];
@@ -150,7 +150,7 @@ const PariHome = () => {
                 <div className="relative z-10 flex flex-col items-center text-center max-w-[860px] px-6 mx-auto">
                     <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--pari-bg-secondary)]/10 dark:bg-white/8 border border-[var(--pari-border)] shadow-sm mb-10 transition-colors">
                         <span className="bg-gradient-to-r from-[#FF4500] to-[#FF6B35] text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">New</span>
-                        <span className="text-[13px] font-medium text-[var(--pari-text-secondary)]">Pan-India + Global Digital Reach →</span>
+                        <span className="text-[13px] font-medium text-[var(--pari-text-secondary)]">Pan India + Global Digital Reach →</span>
                     </div>
 
                     <h1 className="text-[64px] md:text-[80px] leading-[1.0] font-bold tracking-[-0.04em] text-[var(--pari-text-primary)] mb-6 transition-colors">
@@ -234,9 +234,9 @@ const PariHome = () => {
                     {/* Thesis cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[
-                            { icon: 'fa-solid fa-earth-asia', title: 'Community-First', desc: 'Every pathway we build centers around highly engaged consumer groups, spanning both digital and physical spaces.' },
-                            { icon: 'fa-solid fa-chart-pie', title: 'Data-Led', desc: 'Comprehensive behavioral tracking across journeys, effectively linked back to your core business indicators.' },
-                            { icon: 'fa-solid fa-bullseye', title: 'Outcome-Driven', desc: 'Our operational models tie directly to revenue growth, product adoption, and lasting market presence.' },
+                            { icon: 'fa-solid fa-earth-asia', title: 'Community First', desc: 'Every pathway we build centers around highly engaged consumer groups, spanning both digital and physical spaces.' },
+                            { icon: 'fa-solid fa-chart-pie', title: 'Data Led', desc: 'Comprehensive behavioral tracking across journeys, effectively linked back to your core business indicators.' },
+                            { icon: 'fa-solid fa-bullseye', title: 'Outcome Driven', desc: 'Our operational models tie directly to revenue growth, product adoption, and lasting market presence.' },
                         ].map((t) => (
                             <div key={t.title} className="bg-[var(--pari-bg-secondary)]/50 dark:bg-white/4 border border-[var(--pari-border)] rounded-2xl p-8 hover:bg-[var(--pari-bg-secondary)]/80 dark:hover:bg-white/7 transition-all hover:border-[#FF4500]/30 group shadow-sm dark:shadow-none">
                                 <i className={`${t.icon} text-[40px] text-[#FF4500] mb-6 block transition-transform group-hover:scale-110 duration-300`}></i>
@@ -342,11 +342,11 @@ const PariHome = () => {
                                 <i className="fa-solid fa-mountain-city text-[32px] text-[#FF4500]"></i>
                                 <div>
                                     <h3 className="text-[22px] font-bold text-[var(--pari-text-primary)] transition-colors">India</h3>
-                                    <p className="text-[#FF4500] text-[13px] font-semibold uppercase tracking-wide">Pan-India • Offline-First</p>
+                                    <p className="text-[#FF4500] text-[13px] font-semibold uppercase tracking-wide">Pan India • Offline First</p>
                                 </div>
                             </div>
                             <div className="flex flex-wrap gap-2">
-                                {['Colleges', 'RWAs', 'Turfs', 'Communities', 'On-Ground Networks', 'Events'].map(t => (
+                                {['Colleges', 'RWAs', 'Turfs', 'Communities', 'On Ground Networks', 'Events'].map(t => (
                                     <span key={t} className="px-3 py-1.5 bg-[var(--pari-bg-primary)]/60 dark:bg-white/8 border border-[var(--pari-border)] rounded-lg text-[13px] text-[var(--pari-text-secondary)] font-medium transition-colors">{t}</span>
                                 ))}
                             </div>
@@ -362,7 +362,7 @@ const PariHome = () => {
                                 </div>
                             </div>
                             <div className="flex flex-wrap gap-2">
-                                {['Performance Marketing', 'Affiliate Networks', 'Influencer Stacks', 'AI-Led Marketing'].map(t => (
+                                {['Performance Marketing', 'Affiliate Networks', 'Influencer Stacks', 'AI Led Marketing'].map(t => (
                                     <span key={t} className="px-3 py-1.5 bg-[var(--pari-bg-primary)]/60 dark:bg-white/8 border border-[var(--pari-border)] rounded-lg text-[13px] text-[var(--pari-text-secondary)] font-medium transition-colors">{t}</span>
                                 ))}
                             </div>
@@ -383,7 +383,7 @@ const PariHome = () => {
                         {[
                             { icon: 'fa-solid fa-chart-line', title: 'Brand Visibility → Sales', desc: 'Direct correlation of brand visibility with actual sales outcomes.' },
                             { icon: 'fa-solid fa-share-nodes', title: 'Omnichannel Data Capture', desc: 'Unified data across offline and online consumer journeys.' },
-                            { icon: 'fa-solid fa-building-shield', title: 'Proprietary Channels', desc: 'Access to non-biddable, high-trust distribution inventories.' },
+                            { icon: 'fa-solid fa-building-shield', title: 'Proprietary Channels', desc: 'Access to non biddable, high trust distribution inventories.' },
                             { icon: 'fa-solid fa-bolt-lightning', title: 'Speed & Scalability', desc: 'Rapid deployment with measurable accountability at every stage.' },
                             { icon: 'fa-solid fa-bullseye', title: 'ATL + BTL Correlation', desc: 'True above-the-line and below-the-line performance mapping.' },
                             { icon: 'fa-solid fa-handshake-angle', title: 'Hybrid Execution', desc: 'Strong omnichannel and hybrid campaign execution capabilities.' },

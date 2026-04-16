@@ -6,19 +6,19 @@ const models = [
     {
         icon: 'fa-solid fa-map-location-dot',
         title: 'Access to Distribution',
-        desc: 'Pan-India and regional community-driven channels with proven reach across offline and digital environments.',
+        desc: 'Pan India and regional community driven channels with proven reach across offline and digital environments.',
         color: '#FF4500',
     },
     {
         icon: 'fa-solid fa-rocket',
-        title: 'Go-To-Market (GTM) Execution',
-        desc: 'End-to-end support for market entry, testing, and scaling, taking your brand from initial strategy to active on-ground deployment.',
+        title: 'Go To Market (GTM) Execution',
+        desc: 'End to end support for market entry, testing, and scaling, taking your brand from initial strategy to active on ground deployment.',
         color: '#FFB347',
     },
     {
         icon: 'fa-solid fa-share-nodes',
         title: 'Affiliate Stack Creation',
-        desc: 'Performance-linked distribution ecosystems built to scale revenue through partner networks.',
+        desc: 'Performance linked distribution ecosystems built to scale revenue through partner networks.',
         color: '#9999FE',
     },
     {
@@ -49,19 +49,19 @@ const models = [
 
 const partnerTypes = [
     { icon: 'fa-solid fa-bag-shopping', label: 'Consumer Brands & D2C Companies' },
-    { icon: 'fa-solid fa-bowl-food', label: 'FMCG & Youth-First Brands' },
+    { icon: 'fa-solid fa-bowl-food', label: 'FMCG & Youth First Brands' },
     { icon: 'fa-solid fa-credit-card', label: 'Fintech & Consumer Internet Platforms' },
-    { icon: 'fa-solid fa-house-chimney-window', label: 'Community-First Businesses' },
+    { icon: 'fa-solid fa-house-chimney-window', label: 'Community First Businesses' },
     { icon: 'fa-solid fa-palette', label: 'Creative, Media & Performance Agencies' },
-    { icon: 'fa-solid fa-earth-americas', label: 'Expansion-Focused Enterprises' },
+    { icon: 'fa-solid fa-earth-americas', label: 'Expansion Focused Enterprises' },
 ];
 
 const offers = [
     'Proprietary distribution channels',
-    'Sales-linked activations and events access',
-    'Co-IP and co-brand solution creation',
+    'Sales linked activations and events access',
+    'Co IP and co brand solution creation',
     'Demand generation and clientele access',
-    'Franchise-led expansion models',
+    'Franchise led expansion models',
     'Strategic investment and growth options',
 ];
 
@@ -79,11 +79,11 @@ const PariPartnerships = () => {
                     </span>
                     <h1 className="text-[52px] md:text-[68px] font-bold tracking-[-0.03em] leading-[1.0] text-[var(--pari-text-primary)] mb-6 transition-colors">
                         Built for{' '}
-                        <em style={{ fontFamily: 'Georgia, serif', color: '#FF4500' }}>forward-looking</em>{' '}
+                        <em style={{ fontFamily: 'Georgia, serif', color: '#FF4500' }}>forward looking</em>{' '}
                         organizations
                     </h1>
                     <p className="text-[19px] text-[var(--pari-text-secondary)] leading-relaxed max-w-[580px] mx-auto mb-12 transition-colors">
-                        We collaborate with brands, agencies, and platforms on strategic synergies, co-creation, and long-term growth partnerships.
+                        We collaborate with brands, agencies, and platforms on strategic synergies, co creation, and long term growth partnerships.
                     </p>
                     <Link
                         to="/contact"
